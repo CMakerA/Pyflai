@@ -1,0 +1,8 @@
+README.md
+setup.py
+Pyflai/__init__.py
+Pyflai.egg-info/PKG-INFO
+Pyflai.egg-info/SOURCES.txt
+Pyflai.egg-info/dependency_links.txt
+Pyflai.egg-info/requires.txt
+Pyflai.egg-info/top_level.txt

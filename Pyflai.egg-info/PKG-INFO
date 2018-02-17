@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: Pyflai
+Version: 0.0.1.dev3
+Summary: A python design framework.
+Home-page: UNKNOWN
+Author: ArnyminerZ
+Author-email: arnyminer.z@gmail.com
+License: Apache-2.0
+Description-Content-Type: UNKNOWN
+Description: # Pyflai
+        A python ui design framework.<br/>
+        Requires pygame.
+Platform: UNKNOWN
+Requires-Python: >=3
