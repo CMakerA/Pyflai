@@ -60,3 +60,24 @@ class Style:
         self.hovered_style = hovered_style
         self.focused_style = focused_style
         self.name = name
+
+    def all_font(self, font: Font):
+        self.idle_style.font = font
+        self.clicked_style.font = font
+        self.right_clicked_style.font = font
+        self.hovered_style.font = font
+        self.focused_style.font = font
+
+    def all_font_size(self, size: int):
+        self.idle_style.font.size = size
+        self.clicked_style.font.size = size
+        self.right_clicked_style.font.size = size
+        self.hovered_style.font.size = size
+        self.focused_style.font.size = size
+
+    def all_font_color(self, color: Color):
+        self.idle_style.font.color = color
+        self.clicked_style.font.color = color
+        self.right_clicked_style.font.color = color
+        self.hovered_style.font.color = color
+        self.focused_style.font.color = color

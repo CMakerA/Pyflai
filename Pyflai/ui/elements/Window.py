@@ -47,6 +47,13 @@ class Window:
 
     lastEventReadIndex = 0
 
+    def mouse_position(self) -> Vector2:
+        mouse_get_pos = pygame.mouse.get_pos()
+        mouse_x = mouse_get_pos[0]
+        mouse_y = mouse_get_pos[1]
+        mouse_pos = Vector2(mouse_x, mouse_y)
+        return mouse_pos
+
     def start(self):
         if self.on_start_bu:
             self.on_start_bu()
@@ -79,7 +86,7 @@ class Window:
                 self.elements[self.lastElementReadIndex].clear()
                 self.elements[self.lastElementReadIndex].draw()
                 if self.elements[self.lastElementReadIndex].on_element_tick is not None:
-                    self.elements[self.lastElementReadIndex].on_element_tick()
+                    self.elements[self.lastElementReadIndex].on_element_tick(self.elements[self.lastElementReadIndex])
                 if self.on_element_tick is not None:
                     self.on_element_tick(self.elements[self.lastElementReadIndex])
                 self.lastElementReadIndex += 1

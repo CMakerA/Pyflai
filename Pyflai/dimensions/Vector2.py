@@ -26,5 +26,8 @@ class Vector2:
     def __add__(self, other):
         return Vector2(self.x + other.x, self.y + other.y)
 
+    def to_string(self):
+        return "Vector2(" + str(self.x) + ", " + str(self.y) + ")"
+
     def get(self) -> (int, int):
         return self.x, self.y

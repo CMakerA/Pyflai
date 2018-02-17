@@ -1,6 +1,6 @@
 from Pyflai.style.color.Color import *
 
-transparent = Color(255, 255, 255).with_name("transparent")
+transparent = Color(255, 255, 255, 0).with_name("transparent")
 
 black = Color(0, 0, 0).with_name("black")
 white = Color(255, 255, 255).with_name("white")

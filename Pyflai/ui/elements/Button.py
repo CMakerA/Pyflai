@@ -23,9 +23,9 @@ class Button(UIElement):
         self.text = text
         self.styles = styles
         self.current_style = self.styles.idle_style
-        # TODO: Generate label
         self.on_element_tick = self.__tick
         self.label = None
+        self.update()
 
     # <editor-fold desc="with_* methods">
     def with_size(self, size: Size) -> "Button":
@@ -41,7 +41,19 @@ class Button(UIElement):
         return self
 
     def with_font(self, font: Font) -> "Button":
-        self.font = font
+        self.current_style.font = font
+        return self
+
+    def with_font_size(self, size: int) -> "Button":
+        self.current_style.font.size = size
+        return self
+
+    def with_font_color(self, color: Color) -> "Button":
+        self.current_style.font.color = color
+        return self
+
+    def with_background_color(self, color: Color) -> "Button":
+        self.current_style.background_color = color
         return self
     # </editor-fold>
 
@@ -110,15 +122,10 @@ class Button(UIElement):
 
     def __update_styles(self):
         if self.clicked:
-            print("Clicked " + self.id)
             self.current_style = self.styles.clicked_style
         elif self.right_clicked:
-            print("Right Clicked " + self.id)
             self.current_style = self.styles.right_clicked_style
         elif self.hovered:
-            print("Hovered " + self.id)
             self.current_style = self.styles.hovered_style
         else:
             self.current_style = self.styles.idle_style
-            print("Left " + self.id)
-        print("Background Color is " + self.current_style.background_color.to_string() + ". Current style is " + self.current_style.name)
